@@ -21,14 +21,14 @@ var view = {
 			var bodyScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
 			if (bodyScrollTop > 75){
 				$('.navbar').addClass('white-background navbar-border');
-				$('.navbar-nav>li>a, .navbar-brand').addClass('bootstrap-magenta');
-				$('.icon-bar').addClass('bootstrap-background-color');
+				$('.navbar-nav>li>a, .navbar-brand').addClass('black-fill');
+				$('.icon-bar').addClass('black-background');
 				$('.logo').addClass('logo-fill');
 			}
 			else{
 				$('.navbar').removeClass('white-background navbar-border');
-				$('.navbar-nav>li>a, .navbar-brand').removeClass('bootstrap-magenta');
-				$('.icon-bar').removeClass('bootstrap-background-color');
+				$('.navbar-nav>li>a, .navbar-brand').removeClass('black-fill');
+				$('.icon-bar').removeClass('black-background');
 				$('.logo').removeClass('logo-fill');
 			}
 		});
