@@ -41,15 +41,68 @@ h6{
   font-size: 16px;  
 }
 
-.colorize:hover {
-  color: #960089;  
-  /* font-weight: bold; */
+#work, #about, #contact  {
+  padding: 100px 0;
+}
+@media (max-width: 1007px) {
+  #work, #about, #contact   {
+      padding: 70px 0;
+  }
+}
+@media (max-width: 640px){
+  #work, #about, #contact   {
+      padding: 50px 0;
+  }
 }
 
-.z-index {
-  position: relative;
-  z-index: -1;
+
+@media (max-width: 1007px) {
+  h2 {
+      font-size: 50px;
+      line-height: 60px;
+      margin-bottom: 50px;
+  }
 }
+@media (max-width: 640px) {
+  h2 {
+      font-size: 30px;
+      line-height: 40px;
+      margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 1007px){
+  h3 {
+      font-size: 26px;
+      line-height: 30px;
+  }
+}
+@media (max-width: 640px) {
+  h3 {
+      font-size: 20px;
+      line-height: 26px;
+  }
+}
+
+
+@media (max-width: 1007px) {
+  p {
+      font-size: 14px;
+      line-height: 20px;
+  }
+}
+
+.page-width {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+@media (max-width: 640px){
+  .page-width {
+      padding: 0 20px;
+  }
+}
+
 
 /******** BOOTSTRAP ******/
 
@@ -66,6 +119,8 @@ h6{
 .row{
   margin: auto;
 }
+
+
 
 /********  NAVIGATION *******/
 
@@ -95,7 +150,7 @@ h6{
 }
 
 .navbar-border {
-  border-bottom: 2px solid #cccccc;
+  border-bottom: 1px solid#F7F5F3;
 }
 
 .white-background{
@@ -161,6 +216,10 @@ h6{
   max-width: 50px;
 }
 
+.black-fill {
+  color: rgb(0, 0, 0) !important;
+  fill: rgb(0, 0, 0) !important;
+}
 
 /******** COVER *******/
 
@@ -199,9 +258,8 @@ h6{
 }
 
 #cover-name{
-  font-family: 'Arizonia', cursive;    
-  font-size: 110px;                    /* as 80 */
-  font-weight:900;
+  font-size: 50px;                  
+  /* font-weight:700; */
 }
 
 .greetings{
@@ -252,13 +310,14 @@ h6{
 /* ********* TITLE ********* */
 
 div .name {
+  max-width: 40vw;
   display: inline-block;
   position: relative;
   margin: 0 20px;
-  float: left;
+  float: center;
   opacity: 0.0;
-  animation: port 3s 1 forwards;
-  -webkit-animation: port 3s 1 forwards;
+  animation: port 2s 1 forwards;
+  -webkit-animation: port 2s 1 forwards;
 }
 
 div .name:nth-of-type(2){
@@ -271,7 +330,19 @@ div .name:nth-of-type(3){
   -webkit-animation-delay: 0.2s;
 }
 
-/* div:hover b {
+@media (max-width:640px) {
+  div .name {
+    max-width: 80vw;
+  }
+}
+@media (max-width:1007px) {
+  div .name {
+    max-width: 60vw;
+  }
+}
+
+
+/* div:hover .name {
   animation: reset 1s 1;
   -webkit-animation: reset 1s 1 ;
 } */
@@ -326,68 +397,11 @@ div .name:nth-of-type(3){
 } */
 
 
+
+
 /******* CLIENT WORK *******/
 
-@media (max-width: 1007px) {
-  h2 {
-      font-size: 50px;
-      line-height: 60px;
-      margin-bottom: 50px;
-  }
-}
-@media (max-width: 640px) {
-  h2 {
-      font-size: 30px;
-      line-height: 40px;
-      margin-bottom: 30px;
-  }
-}
 
-@media (max-width: 1007px){
-  h3 {
-      font-size: 26px;
-      line-height: 30px;
-  }
-}
-@media (max-width: 640px) {
-  h3 {
-      font-size: 20px;
-      line-height: 26px;
-  }
-}
-
-
-@media (max-width: 1007px) {
-  p {
-      font-size: 14px;
-      line-height: 20px;
-  }
-}
-
-.client-work {
-  padding: 100px 0;
-}
-@media (max-width: 1007px) {
-  .client-work {
-      padding: 70px 0;
-  }
-}
-@media (max-width: 640px){
-  .client-work {
-      padding: 50px 0;
-  }
-}
-
-.page-width {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 40px;
-}
-@media (max-width: 640px){
-  .page-width {
-      padding: 0 20px;
-  }
-}
 
 .client-container {
   display: grid;
@@ -414,15 +428,57 @@ div .name:nth-of-type(3){
   }
 }
 
-.project .img {
-  box-shadow: 0 2px 15px 0 rgba(0,0,0,.25);
+.project-title {
+  color: black;
+}
+
+.project {
+  box-shadow: 1px 5px 12px 1px rgba(0,0,0,.30);
+  /* position: relative; */
 }
 
 .project-img {
   max-width: 100%;
+  background-color: rgba(135, 228, 219, 0.9);
+  opacity: 1;
+  transition: .5s ease;
+  backface-visibility: hidden;
 }
 
-.project:after {
+.project-brand-container {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.project-brand {
+  max-width: 100%;
+  /* transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center; */
+}
+
+.project-brand:hover {
+  opacity:1;
+}
+
+.project-img:hover {
+  opacity: .2;
+}
+
+
+/* .project:after { */
+/* .project:hover {
   content: '';
   height: 100%;
   width: 100%;
@@ -434,7 +490,7 @@ div .name:nth-of-type(3){
   background-repeat: no-repeat;
   transition: .25s ease-in-out;
   background-position: center;
-}
+} */
 
 
 
@@ -444,6 +500,9 @@ div .name:nth-of-type(3){
 
 
 /******** ABOUT ME *******/
+#about {
+  background-color: #F7F5F3;
+}
 
 #about h4 {
   color: black;
@@ -793,14 +852,9 @@ div .name:nth-of-type(3){
   font-size: 16px;
 }
 
+
 /******** CONTACT  *******/
 
-#contact {
-    padding-bottom: 40px;
-    background-color: rgb(150, 0, 137);
-    color: white;
-    /* border-top: rgb(150, 0, 137); */
-}
 
 #contact a:visited{
   color: white;
@@ -822,7 +876,7 @@ footer {
   font-size: 16px;
   width:100%;
   /* height:120px; */
-  padding-top: 40px;                       /* was 30 */
+  padding-top: 60px;                       
   padding-bottom: 50px; 
   /* position: absolute; */                /* this pops the footer up when if the container-fluid div is removed */
   text-align: center;
@@ -832,12 +886,12 @@ footer {
   color: black;
 }
 
-footer img {
-  max-width: 150px;
+footer > .footer-1   {
+  max-width: 200px;
 }
 
-footer > #logo-black   {
-  max-width: 90px;
+footer > .footer-2 {
+  max-width: 120px;
 }
 
 @media only screen and (max-width: 550px) {
