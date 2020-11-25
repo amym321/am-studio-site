@@ -1,5 +1,7 @@
 // animate on scroll attributed to github.com/michalsnik/aos
 // navbar collapse and project card bootstrap codepens from M. Duran
+var visible = false;
+var nav = $('#logo');
 
 var view = {
   displayProjects(projectType){
@@ -23,13 +25,22 @@ var view = {
 				$('.navbar').addClass('white-background navbar-border');
 				$('.navbar-nav>li>a, .navbar-brand').addClass('black-fill');
 				$('.icon-bar').addClass('black-background');
-				$('.logo').addClass('logo-fill');
+				if (!visible) {
+					nav.append('<img id="logo-black" class="navbar-logo logo-black" src="images/logos/logo5.png">');
+					$('#logo-white').remove();
+					visible = true;
+				} 
+				
 			}
-			else{
+			else {
 				$('.navbar').removeClass('white-background navbar-border');
 				$('.navbar-nav>li>a, .navbar-brand').removeClass('black-fill');
 				$('.icon-bar').removeClass('black-background');
-				$('.logo').removeClass('logo-fill');
+				if (visible) {
+					nav.append('<img id="logo-white" class="navbar-logo logo-white" src="images/logos/logo4.png">');
+					$('#logo-black').remove();
+                    visible = false;
+                }
 			}
 		});
 		/*Used to close responsive navbar automatically. When this jquery event
