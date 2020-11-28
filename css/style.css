@@ -8,7 +8,6 @@ body {
   margin: 0;
   padding:0;
   background-color: white;
-  /* display: block; */   /*card*/
 }
 
 p {
@@ -44,19 +43,19 @@ h6{
 #work, #about, #contact  {
   padding: 100px 0;
 }
-@media (max-width: 1007px) {
+@media (max-width: 1010px) {    
   #work, #about, #contact   {
       padding: 70px 0;
   }
 }
-@media (max-width: 640px){
+@media (max-width: 640px){    /* galaxy phones are max height of 640 should user flip device. ipads are min 768 */
   #work, #about, #contact   {
       padding: 50px 0;
   }
 }
 
 
-@media (max-width: 1007px) {
+@media (max-width: 1010px) {
   h2 {
       font-size: 50px;
       line-height: 60px;
@@ -71,7 +70,7 @@ h6{
   }
 }
 
-@media (max-width: 1007px){
+@media (max-width: 1010px){
   h3 {
       font-size: 26px;
       line-height: 30px;
@@ -85,7 +84,7 @@ h6{
 }
 
 
-@media (max-width: 1007px) {
+@media (max-width: 1010px) {
   p {
       font-size: 14px;
       line-height: 20px;
@@ -93,31 +92,14 @@ h6{
 }
 
 .page-width {
-  max-width: 1200px;
+  max-width: 1200px;   /*min-device-width for laptop screens. don't want it to spread too wide */
   margin: 0 auto;
   padding: 0 40px;
 }
-@media (max-width: 640px){
+@media (max-width: 640px){   /* galaxy phones are max height of 640 should user flip device. ipads are min 768 */
   .page-width {
       padding: 0 20px;
   }
-}
-
-
-/******** BOOTSTRAP ******/
-
-.container-fluid{
-  margin: auto;
-  width: 100% !important;
-  padding-left: 0;
-  padding-right: 0;    
-  position:relative;
-  min-height:100%;
-  padding-bottom:220px; /* Height of the footer element */
-}
-
-.row{
-  margin: auto;
 }
 
 
@@ -187,6 +169,13 @@ h6{
     font-size: 12px;
   }
 }
+@media only screen and (max-width: 767px) { 
+  .navbar-nav .divider a{
+  border-left: none;
+  border-bottom: solid;
+  margin-top: -10px;
+  }
+}
 
 .navbar-nav .divider a:hover{
   text-decoration: none !important;
@@ -209,7 +198,7 @@ h6{
 }
 
 #logo-white {
-  max-width: 110px;
+  max-width: 90px;
 }
 
 #logo-black {
@@ -220,6 +209,10 @@ h6{
   color: rgb(0, 0, 0) !important;
   fill: rgb(0, 0, 0) !important;
 }
+
+.black-background {
+  background-color: rgb(0, 0, 0)  !important;
+} 	
 
 /******** COVER *******/
 
@@ -245,6 +238,11 @@ h6{
   animation-duration: 3s;                         
   -webkit-animation-duration: 3s;   
  }
+ @media only screen and (max-width: 767px) { 
+  #cover{
+    background-attachment: scroll;
+  } 
+}
 
 .center{
   margin: 0;
@@ -261,9 +259,10 @@ h6{
   font-size: 50px;                  
   /* font-weight:700; */
 }
-
-.greetings{
-  font-weight: bold !important;
+@media only screen and (max-width: 550px) {
+  #cover-name{
+   font-size: 80px;
+  }
 }
 
 .overlay{
@@ -319,6 +318,11 @@ div .name {
   animation: port 2s 1 forwards;
   -webkit-animation: port 2s 1 forwards;
 }
+@media (max-width: 640px) {
+  div .name {
+    max-width: 80vw;
+  }
+}
 
 div .name:nth-of-type(2){
   animation-delay: 0.15s;
@@ -335,17 +339,11 @@ div .name:nth-of-type(3){
     max-width: 80vw;
   }
 }
-@media (max-width:1007px) {
+@media (max-width:1010px) {
   div .name {
     max-width: 60vw;
   }
 }
-
-
-/* div:hover .name {
-  animation: reset 1s 1;
-  -webkit-animation: reset 1s 1 ;
-} */
 
 @keyframes port {
   0%{
@@ -380,24 +378,6 @@ div .name:nth-of-type(3){
 }
 
 
-/******** SECTION *******/
-
-.section{
-  padding-top: 70px;
-  padding-bottom: 5px;                  /* was 70 */
-}
-
-/* not using anymore */
-/* .qontent{
-  width: 100%;
-  max-width: 1100px;
-  margin: auto;
-  padding-left: 10px;
-  padding-right: 10px;
-} */
-
-
-
 
 /******* CLIENT WORK *******/
 
@@ -406,7 +386,12 @@ div .name:nth-of-type(3){
 .client-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px 100px;
+  gap: 50px 80px;
+}
+@media (max-width: 1010px){
+  .client-container {
+      gap: 40px 30px;
+  }
 }
 @media (max-width: 640px){
   .client-container {
@@ -421,6 +406,7 @@ div .name:nth-of-type(3){
 
 .project-container {
   padding: 25px;
+  border-radius: 5px 5px;
 }
 @media (max-width: 640px) {
     .project-container {
@@ -428,12 +414,18 @@ div .name:nth-of-type(3){
   }
 }
 
-.project-title {
+.project-title h4 {
+  padding-top: 15px;
   color: black;
+}
+@media (max-width: 640px) {
+  .project-title h4 {
+    padding-top: 5px;
+  }
 }
 
 .project {
-  box-shadow: 1px 5px 12px 1px rgba(0,0,0,.30);
+  box-shadow: 1px 5px 12px 1px rgba(0,0,0,.3);
   position: relative;
 }
 
@@ -460,42 +452,15 @@ div .name:nth-of-type(3){
 .project-brand {
   max-width: 100%;
   backface-visibility: hidden;
-  /* transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center; */
 }
 
-/* .project-brand */
 .project:hover  .project-brand-container {
   opacity:1;
 }
 
 .project:hover .project-img {
-  opacity: .08;
+  opacity: .1;
 }
-
-
-/* .project:after { */
-/* .project:hover {
-  content: '';
-  height: 100%;
-  width: 100%;
-  background-color: rgba(135, 228, 219, 0.9);
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  background-repeat: no-repeat;
-  transition: .25s ease-in-out;
-  background-position: center;
-} */
-
-
 
 
 /******* end CLIENT WORK *******/
@@ -507,354 +472,31 @@ div .name:nth-of-type(3){
   background-color: #F7F5F3;
 }
 
-#about h4 {
-  color: black;
-
-  position: relative;
-  z-index: -1;
+/* .about-container-text {
+  padding: 25px 0;
 }
-
-.box{                                              /*** NO BOX CLASS USED  ***/
-  padding: 15px;
-  margin-bottom: 40px;
-  border-style: solid;
-  border-color: rgba(51, 122, 183, 0.10);
-  border-width: thin;
-  border-radius: 5px;
-  box-shadow: 0 12px 12px 0 #D3D3D3;
-  box-sizing: border-box;
-  background-color: white;
-}
-
-.box h5{                                     /*** NO BOX CLASS USED  ***/
-  font-weight: 500px;
-  border-bottom: 2px solid #0a0a0a
-}
-
-.box p{                                     /*** NO BOX CLASS USED  ***/
-  font-size: 16px;                                /* was 15px */
-}
-
-.color {
-  color: rgb(150, 0, 137);
-}
-
-.pad {
-  padding-bottom: 40px;
-}
-
-/******** PROJECTS *******/
-
-#projects{
-  background-color:  #f6f6f6;                 /***Background color */
-}
-
-#projects > h2{
-  margin-bottom: 0;
-}
-
-#projects .subheader{
-  margin: auto;
-  margin-bottom: 50px;
-  margin-top: 50px;
-  padding-right: 40%;
-  padding-left: 40%;
-}
-
-#projects a{
-    color: black;
-    text-decoration: none;
-}
-
-/* #projects h4{
-  color: rgb(150, 0, 137);
+@media (max-width: 640px) {
+    .about-container-text {
+      padding: 15px 0;
+  }
 } */
 
-#project-list{
-  padding-top: 10px;
-  list-style: none;
-  display: flex !important;
-  display: -webkit-flex;
-  -webkit-flex-wrap: wrap;
-  display: -webkit-inline-flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+.about-img-padding {
+ padding: 0 50px;
+}
+@media (max-width: 1010px) {
+  .about-img-padding {
+    padding: 0;
+   }
 }
 
-.single-card{
-  width: 420px;                                       /* was 320 */
-  height: 500px;                                      /* was 510, 420 */
-  display: block;
-  margin-bottom: 40px;
-  margin-left: 12px;
-  margin-right: 12px;
-  text-align: left;
-  border-style: solid;
-  border-color: rgba(51, 122, 183, 0.10);
-  border-width: thin;
-  border-radius: 5px;
-  /* box-shadow: 0 12px 12px 0 #D3D3D3; */
-  box-shadow: 0 12px 12px 0 #d4c4d3;
-  box-sizing: border-box;
-  background-color: white;
+.about-img {
+  max-width: 100%;
 }
 
-.card-img{
-  height: 67%;                                 /* was 32, 45, 50% */
-  overflow: hidden;  
-}
-
-.card-img_src{
-  width: 100%;
-  height: 100%;
-  border-radius: 5px 5px 0 0; 
-
-  transition: all 1s ease;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-}
-
-.single-card:hover .card-img_src{
-    transform: scale(1.18);  
-}
-
-.zoom-in{
-  transform: scale(1.18); 
-}
-
-.card-info{
-  padding: 10px;   
-  width: 100%;
-  height: 33%;                  /* was 68, 56, 50% */
-}
-
-.card-info > p{
-  font-size: 15px;                      /* make 16px? */ 
-  font-weight: 300;
-  line-height: normal;
-  height: 72%;
-  overflow-y: hidden;
-  position: relative;
-}
-
-/* .card-name {
-  font-weight: bold;
-} */
-
-.single-card:hover .card-name{
-   /* color: rgb(150, 0, 137); */
-  text-decoration: none;
-
-}
-
-.magenta-divider{
-  width: 100%;
-  height: 6px;
-  background-color: rgb(150, 0, 137);
-}
-
-.hide{
-  display: none;
-}
-
-.underline {
-  text-decoration-line: underline;
-}
-
-/******** PROJECT POPUP *******/
-
-/* .buttonBox {
-  width: 40%;
-  margin: 0 auto;
-  background: rgba(255,255,255,0.2);
-  padding: 35px;
-  border: 2px solid #fff;
-  border-radius: 20px/50px;
-  background-clip: padding-box;
-  text-align: center;
-} */
-
-
-.button {
-  border-radius: 20px/50px;
-  cursor: pointer;  
-  /* text-decoration: none; */
-  /* transition: all 0.3s ease-out; */
-
-  box-sizing: border-box;
-  width: fit-content;
-  text-align: center;
-  border: solid rgb(150, 0, 137) 2px;
-  padding-left: 5px;
-  padding-right: 5px;
-  font-weight: bold;
-  color: rgb(150, 0, 137);
-  /* position: relative;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); */
-}
-
-.button:hover {
-  background: rgb(150, 0, 137);
-  color: white;
-}
-
-.buttonText {
-  color: rgb(150, 0, 137);
-}
-
-.buttonText:hover {
-  color: white;
-}
-
-.overlay2 {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.overlay2:target {
-  visibility: visible;
-  opacity: 1;
-}
-
-.popup {
-  margin: 70px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  /* width:520px;
-  height: 700px; */
-  /* width: 30%;                  */
-  position: relative;
-  z-index: 100;  
-  /* tranform and transform-style do not correct the Z-index issue that aos.style creates */
-  /* transform-style: preserve-3d;
-  transform: translate3d(); */
-}
-  /* aos-fix does not correct the Z-index issue that aos.style creates */
-/* .aos-fix[data-aos][data-aos].aos-animate {
-  transform: unset;
-} */
-
-.popup1 {
-  width:520px;
-  height: 580px;
-}
-
-.popup2 {
-  width:520px;
-  height: 600px;
-}
-
-.popup3 {
-  width:520px;
-  height: 550px;
-}
-
-.popup4 {
-  width:520px;
-  height: 750px;
-}
-
-.popup5 {
-  width:520px;
-  height: 540px;
-}
-
-.popup6 {
-  width:520px;
-  height: 440px;
-}
-
-.popup7 {
-  width:520px;
-  height: 640px;
-}
-
-.popup8 {
-  width:520px;
-  height: 590px;
-}
-
-.popup9 {
-  width:520px;
-  height: 630px;
-}
-
-.popup h4 {
+/* h4 .about-container-text {
   margin-top: 0;
-  padding-right: 20px;
-  padding-left: 20px;
-  /* color: #333; */
-}
-
-.popup .close {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-
-  /* transition: all 200ms; */
-  font-size: 40px;
-  font-weight: bold;
-  text-decoration: none;
-  color: rgb(150, 0, 137);
-}
-
-.popup .close:hover {
-  color: rgb(150, 0, 137);
-}
-
-.popup .content {
-  /* max-height: 30%; */
-  overflow: auto;
-}
-
-.popup img {
-  margin-bottom: 25px;
-  /* width: 75%; */
-  padding-left: 8%;
-  padding-right: 8%;
-}
-
-.buttonMargin {
-  margin-right: 30px;
-}
-
-.buttonBottom {
-  margin-bottom: 15px;
-}
-
-
-@media screen and (max-width: 700px){
-  .box{
-    width: 90%;
-  }
-  .popup{
-    width: 90%;
-  }
-}
-
-/* .content img {
-  width: 80%;                           
-  height: 250px;
 } */
-
-
-/******** BOOTSRAP FORM CONTROL  *******/
-.form-control{
-  font-size: 16px;
-}
-
 
 /******** CONTACT  *******/
 
@@ -897,52 +539,21 @@ footer > .footer-2 {
   max-width: 120px;
 }
 
-@media only screen and (max-width: 550px) {
-  #cover-name{
-   font-size: 80px;
-  }
-
-  #projects .subheader{
-  padding-left: 30px;
-  padding-right: 30px;
-  }
+hr {
+  height: 5px;
+  width: 120px;
+  border-top: 4px double black;
+  overflow: visible;
 }
 
-@media only screen and (max-width: 767px) { 
-  #cover{
-    background-attachment: scroll;
-  } 
-
-  .navbar-nav .divider a{
-  border-left: none;
-  border-bottom: solid;
-  margin-top: -10px;
- }
-}
-
-/* ----------CAROUSEL----------*/       /*****  NO CAROUSEL  ****/
-#myCarousel{
-  margin: auto;
+hr:after {
+  content: '§';
+  font-weight: bold;
+  padding: 0 4px;         /*30% doesn't shorten line */
   position: relative;
-  height: 80vh;
-  width: 80%;
-}
+  top: -13px;
+  }
 
-.background{                             /*****  NO CAROUSEL  ****/
-  background-repeat: no-repeat; 
-  /*background-attachment: fixed;*/
-  background-size: auto;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-color: white;
-   background-position: center center;
-   background-color: white !important;
-}
+/**** end FOOTER ****/
 
 
-@media only screen and (max-width: 767px) { 
-  .background{
-    background-attachment: scroll;
-  } 
-}

@@ -26,7 +26,7 @@ var view = {
 				$('.navbar-nav>li>a, .navbar-brand').addClass('black-fill');
 				$('.icon-bar').addClass('black-background');
 				if (!visible) {
-					nav.append('<img id="logo-black" class="navbar-logo logo-black" src="images/logos/logo5.png">');
+					nav.append('<a href="#cover"><img id="logo-black" class="navbar-logo logo-black" src="images/logos/logo10.png"></a>');
 					$('#logo-white').remove();
 					visible = true;
 				} 
@@ -37,7 +37,7 @@ var view = {
 				$('.navbar-nav>li>a, .navbar-brand').removeClass('black-fill');
 				$('.icon-bar').removeClass('black-background');
 				if (visible) {
-					nav.append('<img id="logo-white" class="navbar-logo logo-white" src="images/logos/logo4.png">');
+					nav.append('<a href="#cover"><img id="logo-white" class="navbar-logo logo-white" src="images/logos/logo9.png"></a>');
 					$('#logo-black').remove();
                     visible = false;
                 }
