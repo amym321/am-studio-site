@@ -36,7 +36,7 @@ var view = {
 				$('.navbar-nav>li>a, .navbar-brand').removeClass('black-fill');
 				$('.icon-bar').removeClass('black-background');
 				if (visible) {
-					// nav.append('<a href="#cover"><img id="logo-white" class="navbar-logo logo-white" src="images/logos/logo9.png"></a>');
+					nav.append('<a href="#cover"><img id="logo-white" class="navbar-logo logo-white" src="images/logos/logo9.png"></a>');
 					$('#logo-black').remove();
                     visible = false;
                 }
