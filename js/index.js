@@ -1,5 +1,3 @@
-// animate on scroll attributed to github.com/michalsnik/aos
-// navbar collapse and project card bootstrap codepens from M. Duran
 var visible = false;
 var nav = $('#logo');
 
@@ -21,7 +19,8 @@ var view = {
 
 		$(window).scroll(function(){
 			var bodyScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-			if (bodyScrollTop > 75){
+			// bodyScrollTop > 75
+			if (bodyScrollTop > 180){
 				$('.navbar').addClass('white-background navbar-border');
 				$('.navbar-nav>li>a, .navbar-brand').addClass('black-fill');
 				$('.icon-bar').addClass('black-background');
@@ -37,7 +36,7 @@ var view = {
 				$('.navbar-nav>li>a, .navbar-brand').removeClass('black-fill');
 				$('.icon-bar').removeClass('black-background');
 				if (visible) {
-					nav.append('<a href="#cover"><img id="logo-white" class="navbar-logo logo-white" src="images/logos/logo9.png"></a>');
+					// nav.append('<a href="#cover"><img id="logo-white" class="navbar-logo logo-white" src="images/logos/logo9.png"></a>');
 					$('#logo-black').remove();
                     visible = false;
                 }
@@ -71,3 +70,20 @@ var view = {
 };
 
 view.setUpEventListeners();
+
+
+// parallax layers
+window.addEventListener("scroll", function () {
+    const topDistance = this.pageYOffset;
+    const layers = document.querySelectorAll("[data-type='parallax']");
+    layers.forEach(function (layer) {
+        const depth = layer.getAttribute('data-depth');
+        const movement = -(topDistance * depth);
+        const translate3d = `translate3d(0, ${movement}px, 0)`;
+        layer.style['-webkit-transform'] = translate3d;
+        layer.style['-moz-transform'] = translate3d;
+        layer.style['-ms-transform'] = translate3d;
+        layer.style['-o-transform'] = translate3d;
+        layer.style.transform = translate3d;
+    });
+});

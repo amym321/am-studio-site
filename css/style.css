@@ -111,11 +111,11 @@ h6{
   font-size: 18px;
   font-weight: 500;
   padding: 10px 70px;
-  transition: all 1s ease; 
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  -ms-transition: all 1s ease;
+  transition: all .5s ease; 
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  -ms-transition: all .5s ease;
 
   /* position: relative;
   z-index: -1; */
@@ -214,17 +214,27 @@ h6{
   background-color: rgb(0, 0, 0)  !important;
 } 	
 
+
 /******** COVER *******/
 
 
-#cover {
+/* #cover */
+.nothing {
   width: 100%;
   height: 100vh;
-  background-image: url(../images/mountains.jpg); 
+  
+  /* background-image: url(../images/mountains.jpg);  */
+
+  overflow: hidden;
+  background-color: white;
+  position:relative;
+  animation-duration: 3s;                         
+  -webkit-animation-duration: 3s; 
+  
   background-position: center;
   /* Image doesn't repeat */
   background-repeat: no-repeat;
-  /* Makes the image fixed in the viewpoint so that it doesn't move when 
+  /* Makes the image fixed in the viewport so that it doesn't move when 
   the content height is greater than the image height */
   background-attachment: fixed;
   /* makes the background image rescale based on its container's size */
@@ -232,11 +242,8 @@ h6{
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  overflow: hidden;
-  background-color: white;
-  position:relative;
-  animation-duration: 3s;                         
-  -webkit-animation-duration: 3s;   
+
+  overflow: hidden;                                 /* parallax */
  }
  @media only screen and (max-width: 767px) { 
   #cover{
@@ -275,7 +282,7 @@ h6{
   border-bottom-width: thin;
   top: 0;
   left: 0;
-  opacity: 0.3;
+  opacity: 0.25;
   width: 100%;
   height: 100%;
 }
@@ -306,10 +313,153 @@ h6{
 }
 
 
+/* ********* PARALLAX LAYERS ********* */
+
+.module__white-bg {
+  background-color: #fff;
+}
+
+.white {
+  color: white;
+}
+
+#hero {
+  height: 100vh;  /* try 800px */
+  overflow: hidden;
+  position: relative;
+}
+
+.layer {
+  background-position: center !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 800px; 
+  position: fixed;
+  z-index: -1;
+}
+
+#hero, .layer {
+  /* min-height: 800px; */
+  height: 100vh;
+}
+
+
+.layer-bg {
+  background: url(../images/mountains4.jpg);
+
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover; 
+ }
+ @media only screen and (max-width: 767px) { 
+  #cover{
+    background-attachment: scroll;
+  }
+}
+
+.layer-1 {
+  background: url(../images/mountains3.png);
+  
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover; 
+ }
+ @media only screen and (max-width: 767px) { 
+  #cover{
+    background-attachment: scroll;
+  }
+}
+
+.layer-2 {
+  background-image: url(../images/mountains2.png);
+  
+  /* background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover; 
+ }
+ @media only screen and (max-width: 767px) { 
+  #cover{
+    background-attachment: scroll;
+  } */
+}
+
+.layer-3 {
+  background-image: url(../images/mountains1.png);
+  
+  /* background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover; 
+ }
+ @media only screen and (max-width: 767px) { 
+  #cover{
+    background-attachment: scroll;
+  } */
+}
+
+.layer-4 {
+  background-image: url(../images/balloonBG5.png);
+  
+  /* background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover; 
+ }
+ @media only screen and (max-width: 767px) { 
+  #cover{
+    background-attachment: scroll;
+  } */
+}
+
+/* .layer-overlay {
+  background-color: rgba(21, 43, 57, 0.5);
+} */
+
+.portfolioBtnLarge {
+  margin: 10px 0;
+  max-width: 320px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,.6);
+}
+
+.heroParalax div {
+  font-size: 140px;
+  }
+
+.heroParalax  h1 {
+  font-size: 130px;
+  font-weight: 400;
+  text-shadow: 0px 0px 20px rgba(0,0,0,.85);
+  margin-top: 250px;
+  font-weight: 700;
+  }
+
+.accessSectionSpacer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#accessMedikitBtn {
+  cursor: pointer !important;
+}
+
+.center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* ********* end PARALLAX ********* */
+
+
+
 /* ********* TITLE ********* */
 
 div .name {
-  max-width: 40vw;
+  max-width: 38vw;
   display: inline-block;
   position: relative;
   margin: 0 20px;
@@ -381,7 +531,9 @@ div .name:nth-of-type(3){
 
 /******* CLIENT WORK *******/
 
-
+#work {
+  background-color: white;
+}
 
 .client-container {
   display: grid;
@@ -500,9 +652,13 @@ div .name:nth-of-type(3){
 
 /******** CONTACT  *******/
 
+#contact {
+  background-color: white;
+}
 
-#contact a:visited{
+#contact a:visited {
   color: white;
+  background-color: white;
 }
 
 #contact a:link {
