@@ -221,7 +221,7 @@ h6{
 /* #cover */
 .nothing {
   width: 100%;
-  height: 100vh;
+  height: 100%;            /* 100vh? */
   
   /* background-image: url(../images/mountains.jpg);  */
 
@@ -284,7 +284,7 @@ h6{
   left: 0;
   opacity: 0.25;
   width: 100%;
-  height: 100vh;  /* was 100% */
+  height: 100%;  /* 100vh?  always was 100% */
 }
 
 .arrow{
@@ -324,7 +324,7 @@ h6{
 }
 
 #hero {
-  height: 100vh;  /* try 800px */
+  height: 100%;            /* 100vh.   try 800px */
   overflow: hidden;
   position: relative;
 }
@@ -334,14 +334,14 @@ h6{
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  /* height: 800px;  */ /* see below */
+  /* height: 800px;  */     /* see below */
   position: fixed;
   z-index: -1;
 }
 
 #hero, .layer {
   /* min-height: 800px; */
-  height: 100vh;
+  height: 100%;            /* 100vh */
 }
 
 
