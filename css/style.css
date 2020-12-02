@@ -284,7 +284,7 @@ h6{
   left: 0;
   opacity: 0.25;
   width: 100%;
-  height: 100%;
+  height: 100vh;  /* was 100% */
 }
 
 .arrow{
@@ -334,7 +334,7 @@ h6{
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 800px; 
+  /* height: 800px;  */ /* see below */
   position: fixed;
   z-index: -1;
 }
