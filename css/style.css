@@ -252,6 +252,7 @@ h6{
 .center{
   margin: 0;
   color: white;
+  /* color: rgb(19, 87, 189); */
   text-align: center;
   position: absolute;
   top: 50%;
@@ -271,7 +272,8 @@ h6{
 }
 
 .overlay{
-  background: rgb(150, 0, 137);
+  /* background: rgb(150, 0, 137); */
+  background: rgb(27, 27, 27);
   position: absolute;
   margin: 0;
   padding: 0;
@@ -344,7 +346,7 @@ h6{
 
 
 .layer-bg {
-  background: url(../images/mountains4.jpg);
+  background: url(../images/cover/Snow2.jpg);
 
   background-size: cover;
   -webkit-background-size: cover;
@@ -386,7 +388,7 @@ h6{
 }
 
 .layer-3 {
-  background-image: url(../images/mountains1.png);
+  background-image: url(../images/cover/Snow1c.png);
   
   /* background-size: cover;
   -webkit-background-size: cover;
@@ -400,7 +402,7 @@ h6{
 }
 
 .layer-4 {
-  background-image: url(../images/balloonBG6.png);
+  background-image: url(../images/BalloonX.png);
   
   /* background-size: cover;
   -webkit-background-size: cover;
