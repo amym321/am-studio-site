@@ -1,3 +1,8 @@
+$(window).load(function(){
+	$('.loader').fadeOut();
+});
+
+
 var visible = false;
 var nav = $('#logo');
 
