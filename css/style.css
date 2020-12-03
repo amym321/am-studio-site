@@ -388,7 +388,7 @@ h6{
 }
 
 .layer-3 {
-  background-image: url(../images/cover/Snow1c.png);
+  background-image: url(../images/cover/Snow3.png);
   
   /* background-size: cover;
   -webkit-background-size: cover;
@@ -459,7 +459,7 @@ h6{
 /* ********* TITLE ********* */
 
 div .name {
-  max-width: 38vw;
+  max-width: 42vw;
   display: inline-block;
   position: relative;
   margin: 0 20px;
