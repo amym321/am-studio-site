@@ -49,11 +49,15 @@ h6{
   }
 }
 @media (max-width: 640px){    /* galaxy phones are max height of 640 should user flip device. ipads are min 768 */
-  #work, #about, #contact   {
+  #work, #about {
       padding: 50px 0;
   }
 }
-
+@media (max-width: 640px){    
+ #contact   {
+      padding: 50px 40px;
+  }
+}
 
 @media (max-width: 1010px) {
   h2 {
@@ -111,7 +115,7 @@ h6{
 	width: 100%;
 	height: 100%;
 	z-index: 9999;
-	background: url(../images//earth-spinner2.svg) 50% 50% no-repeat #d0e7ff;
+  background: url(../images//earth-spinner2.svg) 50% 50% no-repeat #d0e7ff;
 }
 
 
