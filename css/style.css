@@ -563,7 +563,7 @@ div .name:nth-of-type(3){
       gap: 40px 30px;
   }
 }
-@media (max-width: 640px){
+@media (max-width: 630px){    /* less than 640. still want landscape galaxy phone to have 2 containers per row */
   .client-container {
       grid-template-columns: 1fr;
       gap: 30px;
