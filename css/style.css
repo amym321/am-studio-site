@@ -344,6 +344,7 @@ h6{
   height: 100vh;  /* try 800px */
   overflow: hidden;
   position: relative;
+  background-color:  rgb(27, 27, 27, .25);  
 }
 
 .layer {
