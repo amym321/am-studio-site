@@ -358,16 +358,17 @@ div .name:nth-of-type(3){
   -webkit-animation-delay: 0.2s;
 } */
 
-@media (max-width:640px) {
-  div .name {
-    max-width: 80vw;
-  }
-}
 @media (max-width:1010px) {
   div .name {
     max-width: 60vw;
   }
 }
+@media (max-width:640px) {
+  div .name {
+    max-width: 80vw;
+  }
+}
+
 
 /* @keyframes port {
   0%{
