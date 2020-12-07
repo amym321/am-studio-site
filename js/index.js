@@ -30,7 +30,7 @@ var view = {
 				$('.navbar-nav>li>a, .navbar-brand').addClass('black-fill');
 				$('.icon-bar').addClass('black-background');
 				if (!visible) {
-					nav.append('<a href="#cover"><img id="logo-black" class="navbar-logo logo-black" src="images/logos/logo10.png"></a>');
+					nav.append('<a href="#cover"><img id="logo-black" class="navbar-logo logo-black" src="images/logos/logo10.png" alt="AM Studio Shopify Web Development Logo"></a>');
 					$('#logo-white').remove();
 					visible = true;
 				} 
@@ -41,7 +41,7 @@ var view = {
 				$('.navbar-nav>li>a, .navbar-brand').removeClass('black-fill');
 				$('.icon-bar').removeClass('black-background');
 				if (visible) {
-					nav.append('<a href="#cover"><img id="logo-white" class="navbar-logo logo-white" src="images/logos/logo9.png"></a>');
+					nav.append('<a href="#cover"><img id="logo-white" class="navbar-logo logo-white" src="images/logos/logo9.png" alt="AM Studio Shopify Web Development Logo"></a>');
 					$('#logo-black').remove();
                     visible = false;
                 }
@@ -78,17 +78,17 @@ view.setUpEventListeners();
 
 
 // parallax layers
-window.addEventListener("scroll", function () {
-    const topDistance = this.pageYOffset;
-    const layers = document.querySelectorAll("[data-type='parallax']");
-    layers.forEach(function (layer) {
-        const depth = layer.getAttribute('data-depth');
-        const movement = -(topDistance * depth);
-        const translate3d = `translate3d(0, ${movement}px, 0)`;
-        layer.style['-webkit-transform'] = translate3d;
-        layer.style['-moz-transform'] = translate3d;
-        layer.style['-ms-transform'] = translate3d;
-        layer.style['-o-transform'] = translate3d;
-        layer.style.transform = translate3d;
-    });
-});
+// window.addEventListener("scroll", function () {
+//     const topDistance = this.pageYOffset;
+//     const layers = document.querySelectorAll("[data-type='parallax']");
+//     layers.forEach(function (layer) {
+//         const depth = layer.getAttribute('data-depth');
+//         const movement = -(topDistance * depth);
+//         const translate3d = `translate3d(0, ${movement}px, 0)`;
+//         layer.style['-webkit-transform'] = translate3d;
+//         layer.style['-moz-transform'] = translate3d;
+//         layer.style['-ms-transform'] = translate3d;
+//         layer.style['-o-transform'] = translate3d;
+//         layer.style.transform = translate3d;
+//     });
+// });
