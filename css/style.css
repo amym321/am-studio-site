@@ -438,7 +438,7 @@ div .name:nth-of-type(3){
 
 
 .layer-bg {
-  background: url(../images/cover/Snow2b.jpg);
+  background: url(../images/cover/Snow2c.jpg);
 
   background-size: cover;
   -webkit-background-size: cover;
@@ -480,7 +480,7 @@ div .name:nth-of-type(3){
 }
 
 .layer-3 {
-  background-image: url(../images/cover/Snow4.png);
+  background-image: url(../images/cover/Snow4b.png);
   
   /* background-size: cover;
   -webkit-background-size: cover;
