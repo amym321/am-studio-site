@@ -234,6 +234,9 @@ h6{
 
 /******** COVER *******/
 
+.blue {
+  background: rgb(160, 209, 255);
+}
 
 /* #cover    Used before parallax layers.  Not used at all now */
 .nothing {
@@ -418,7 +421,7 @@ div .name:nth-of-type(3){
   height: 100vh;  /* try 800px */
   overflow: hidden;
   position: relative;
-  background-color:  rgb(27, 27, 27, .25);  
+  background-color:  rgba(27, 27, 27, 0.25);  
 }
 
 .layer {
