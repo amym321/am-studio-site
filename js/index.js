@@ -24,27 +24,53 @@ var view = {
 
 		$(window).scroll(function(){
 			var bodyScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-			// bodyScrollTop > 75
-			if (bodyScrollTop > 180){
-				$('.navbar').addClass('white-background navbar-border');
-				$('.navbar-nav>li>a, .navbar-brand').addClass('black-fill');
-				$('.icon-bar').addClass('black-background');
-				if (!visible) {
-					nav.append('<a href="#cover"><img id="logo-black" class="navbar-logo logo-black" src="images/logos/logo10.png" alt="AM Studio Shopify Web Development Logo"></a>');
-					$('#logo-white').remove();
-					visible = true;
-				} 
-				
+			// bodyScrollTop > 180
+
+			if (screen.width < 641) {
+				if (bodyScrollTop > 220){
+					$('.navbar').addClass('white-background navbar-border');
+					$('.navbar-nav>li>a, .navbar-brand').addClass('black-fill');
+					$('.icon-bar').addClass('black-background');
+					if (!visible) {
+						nav.append('<a href="#cover"><img id="logo-black" class="navbar-logo logo-black" src="images/logos/logo10.png" alt="AM Studio Shopify Web Development Logo"></a>');
+						$('#logo-white').remove();
+						visible = true;
+					} 
+					
+				}
+				else {
+					$('.navbar').removeClass('white-background navbar-border');
+					$('.navbar-nav>li>a, .navbar-brand').removeClass('black-fill');
+					$('.icon-bar').removeClass('black-background');
+					if (visible) {
+						nav.append('<a href="#cover"><img id="logo-white" class="navbar-logo logo-white" src="images/logos/logo9.png" alt="AM Studio Shopify Web Development Logo"></a>');
+						$('#logo-black').remove();
+						visible = false;
+					}
+				}
 			}
 			else {
-				$('.navbar').removeClass('white-background navbar-border');
-				$('.navbar-nav>li>a, .navbar-brand').removeClass('black-fill');
-				$('.icon-bar').removeClass('black-background');
-				if (visible) {
-					nav.append('<a href="#cover"><img id="logo-white" class="navbar-logo logo-white" src="images/logos/logo9.png" alt="AM Studio Shopify Web Development Logo"></a>');
-					$('#logo-black').remove();
-                    visible = false;
-                }
+				if (bodyScrollTop > 300){
+					$('.navbar').addClass('white-background navbar-border');
+					$('.navbar-nav>li>a, .navbar-brand').addClass('black-fill');
+					$('.icon-bar').addClass('black-background');
+					if (!visible) {
+						nav.append('<a href="#cover"><img id="logo-black" class="navbar-logo logo-black" src="images/logos/logo10.png" alt="AM Studio Shopify Web Development Logo"></a>');
+						$('#logo-white').remove();
+						visible = true;
+					} 
+					
+				}
+				else {
+					$('.navbar').removeClass('white-background navbar-border');
+					$('.navbar-nav>li>a, .navbar-brand').removeClass('black-fill');
+					$('.icon-bar').removeClass('black-background');
+					if (visible) {
+						nav.append('<a href="#cover"><img id="logo-white" class="navbar-logo logo-white" src="images/logos/logo9.png" alt="AM Studio Shopify Web Development Logo"></a>');
+						$('#logo-black').remove();
+						visible = false;
+					}
+				}
 			}
 		});
 		/*Used to close responsive navbar automatically. When this jquery event
