@@ -447,7 +447,7 @@ div .name:nth-of-type(3){
   height: 100vh;  /* try 800px */
   overflow: hidden;
   position: relative;
-  background-color:  rgba(27, 27, 27, 0.15);  
+  /* background-color:  rgba(27, 27, 27, 0.15);   */
 }
 
 .layer {
@@ -473,6 +473,8 @@ div .name:nth-of-type(3){
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover; 
+
+  background-color:  rgba(27, 27, 27, 0.15);  
  }
  @media only screen and (max-width: 767px) { 
   #cover{
