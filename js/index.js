@@ -118,3 +118,27 @@ window.addEventListener("scroll", function () {
         layer.style.transform = translate3d;
     });
 });
+
+particlesJS("snowfall", {
+	"particles": {
+	   "number": {
+		  "value": 1000
+	   },
+	   "shape": {
+		  "type": "circle"
+	   },
+	   "size": {
+		  "value": 2,
+		  "random": true
+	   },
+	   "line_linked": {
+		  "enable": false
+	   },
+	   "move": {
+		  "enable": true,
+		  "speed": 10,
+		  "direction": "bottom",
+		  "straight": true
+	   }
+	}
+})()
