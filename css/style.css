@@ -82,13 +82,13 @@ h6{
 @media (max-width: 1010px){
   h1 {
       font-size: 36px;
-      line-height: 30px;
+      line-height: 46px;
   }
 }
 @media (max-width: 640px) {
   h1 {
-      font-size: 22px;
-      line-height: 26px;
+      font-size: 26px;
+      line-height: 40px;
   }
 }
 
