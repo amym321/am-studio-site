@@ -845,7 +845,7 @@ footer > .footer-1   {
 }
 @media (max-width: 640px) {
   footer > .footer-1   {
-    max-width: 150px;
+    max-width: 180px;
   }
 }
 
@@ -854,7 +854,7 @@ footer > .footer-2 {
 }
 @media (max-width: 640px) {
   footer > .footer-2   {
-    max-width: 165px;
+    max-width: 200px;
   }
 }
 
