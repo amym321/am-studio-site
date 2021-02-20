@@ -129,12 +129,12 @@ footer {
   }
 }
 @media (max-width: 640px){
-  #work, #about, #services, #articles {
+  #work, #about, #services, #articles, #blog {
       padding: 50px 0;
   }
 }
 @media (max-width: 640px){    
- #contact, #blog   {
+ #contact   {
       padding: 50px 40px;
   }
 }
@@ -478,7 +478,7 @@ button a:hover {
 /******* ARTICLES *******/
 
 .articles-container {
-  padding: 0 100px;
+  padding: 0 100px 100px 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 50px 80px;
