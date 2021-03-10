@@ -139,7 +139,7 @@ footer {
 .dark {
   color: black;
 }
-.dark:hover{
+.dark:hover {
   color: rgb(0, 39, 167);
 }
 
@@ -460,7 +460,10 @@ div .name {
   color:rgb(151, 4, 137);
   border-color: rgb(151, 4, 137);
 }
-
+.service-title5 {
+  color:rgb(0, 28, 119);
+  border-color: rgb(0, 28, 119);
+}
 
 /******* ARTICLES *******/
 
@@ -579,9 +582,9 @@ button a:hover {
 /******** ABOUT ME *******/
 
 .about-img-padding {
- padding: 0 80px;
+ padding: 0 60px;
 }
-@media (max-width: 1010px) {
+@media (max-width: 1025px) {
   .about-img-padding {
     padding: 0;
    }
@@ -589,10 +592,6 @@ button a:hover {
 
 
 /******** CONTACT  *******/
-
-.btn-social-icon{
-  font-size: 30px;
-}
 
 .divider {
   width: 30%;
@@ -603,3 +602,10 @@ button a:hover {
   font-weight: normal !important;
 }
 
+.btn-social-icon {
+  font-size: 30px;
+  color: rgb(0, 39, 167);
+} 
+.btn-social-icon:hover {
+  color: rgb(0, 27, 114);
+} 
