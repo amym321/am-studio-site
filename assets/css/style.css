@@ -150,7 +150,8 @@ footer {
 }
 @media (max-width: 640px){   
   .page-width {
-      padding: 0 20px;
+      padding-left: 20px ;
+      padding-right: 20px ;
   }
 }
 
@@ -320,6 +321,12 @@ footer {
   }
 }
 
+@media only screen and (max-width: 767px) {
+  .banner-text {
+   padding-top: 110px;
+  }
+}
+
 .arrow {
   bottom: 0;
   left: 50%;
@@ -481,7 +488,7 @@ div .name {
 }
 @media (max-width: 630px){ 
   .articles-container {
-      padding: 0;
+      padding: 50px;
       grid-template-columns: 1fr;
       gap: 30px;
   }
@@ -504,6 +511,7 @@ button a:hover {
   background-color:rgb(151, 4, 137) !important; 
   border-color: rgb(151, 4, 137) !important;
 }
+
 /******* CLIENT WORK *******/
 
 .client-container {
