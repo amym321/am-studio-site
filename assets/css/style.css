@@ -488,7 +488,7 @@ div .name {
 }
 @media (max-width: 630px){ 
   .articles-container {
-      padding: 50px;
+      padding: 50px 50px 90px 50px;
       grid-template-columns: 1fr;
       gap: 30px;
   }
