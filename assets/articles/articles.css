@@ -51,3 +51,6 @@
   grid-template-columns: 1fr;  */
 }
 
+.indent {
+  margin-left: 25px;
+}
