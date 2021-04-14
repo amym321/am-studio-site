@@ -506,12 +506,12 @@ button a:hover {
 .button-all {
   background-color:rgb(175, 4, 158) !important; 
   border-color: rgb(175, 4, 158)!important;
-  color: white;
+  color: white!important;
 }
 .button-all:hover {
   background-color:rgb(151, 4, 137) !important; 
   border-color: rgb(151, 4, 137) !important;
-  color: white;
+  color: white!important;
 }
 
 /******* CLIENT WORK *******/
