@@ -9,7 +9,7 @@ body {
   padding:0;  
 }
 
-p {
+p, button {
   font-size: 16px; 
   margin-top: 10px;
   margin-bottom: 20px;
@@ -71,7 +71,7 @@ h6{
 }
 
 @media (max-width: 1010px) {
-  p {
+  p, button {
       font-size: 14px;
       line-height: 20px;
   }
@@ -506,10 +506,12 @@ button a:hover {
 .button-all {
   background-color:rgb(175, 4, 158) !important; 
   border-color: rgb(175, 4, 158)!important;
+  color: white;
 }
 .button-all:hover {
   background-color:rgb(151, 4, 137) !important; 
   border-color: rgb(151, 4, 137) !important;
+  color: white;
 }
 
 /******* CLIENT WORK *******/

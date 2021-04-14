@@ -54,3 +54,13 @@
 .indent {
   margin-left: 25px;
 }
+
+.next-top-pad {
+  padding-top: 100px;
+}
+
+.pad {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
